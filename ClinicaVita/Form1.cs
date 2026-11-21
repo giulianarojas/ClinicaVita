@@ -1,4 +1,4 @@
-using ClinicaVita.DAL;
+﻿using ClinicaVita.DAL;
 using ClinicaVita.PL;
 
 namespace ClinicaVita
@@ -17,13 +17,12 @@ namespace ClinicaVita
                 using (var con = Conexion.ObtenerConexion())
                 {
                     con.Open();
-                    statusLabel.Text = "Conexión establecida correctamente";
                     MessageBox.Show("La conexión con la base de datos fue exitosa.", "Clínica Vita", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             catch (Exception ex)
             {
-                statusLabel.Text = "No se pudo conectar con la base de datos";
+                MessageBox.Show("Error de conexión: " + ex.Message, "Clínica Vita", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 MessageBox.Show("Error de conexión: " + ex.Message, "Clínica Vita", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -51,6 +50,11 @@ namespace ClinicaVita
 
         private void Form1_Load(object sender, EventArgs e)
         {
+        }
+
+        private void employeesCard_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

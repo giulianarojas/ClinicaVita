@@ -226,6 +226,7 @@
             employeesCard.Name = "employeesCard";
             employeesCard.Size = new Size(348, 190);
             employeesCard.TabIndex = 3;
+            employeesCard.Paint += employeesCard_Paint;
             // 
             // button3
             // 
@@ -236,7 +237,7 @@
             button3.ForeColor = Color.White;
             button3.Location = new Point(24, 123);
             button3.Name = "button3";
-            button3.Size = new Size(150, 40);
+            button3.Size = new Size(137, 40);
             button3.TabIndex = 0;
             button3.Text = "Ir a empleados";
             button3.UseVisualStyleBackColor = false;
